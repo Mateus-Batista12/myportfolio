@@ -38,9 +38,8 @@ body{
 }
 
 .btn{
-    display: flex;
-    justify-content: center;
-    padding: .2rem 2rem;  /*aqui define o tamanho do botão 8rem é altura 3 rem o comprimento*/
+    display: inline-block;
+    padding: .8rem 3rem;  /*aqui define o tamanho do botão 8rem é altura 3 rem o comprimento*/
     border: .2rem solid #00bcd4; /*aqui define o tamando da bordar e sua cor*/
     color:#00bcd4; /*Aqui define a cor do texto*/
     cursor: pointer;
@@ -354,100 +353,44 @@ h1{
     text-shadow: 0.1em 0.1em 0.2em #292929;
 }
 
-.projects h2{
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    margin-bottom: 40px;
-}
+
 
 .projects .box{
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    font-family: 'Roboto Condensed', sans-serif;
+    gap: 1.5rem;
 }
 
-.projects .box .image{
-    width: 800px;
-    height: 400px;
-    margin-left: 40px;
+.projects .box .box-22{
+    padding: 2rem;
+    background: #292928;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: 0.3rem solid #3586ff;
+    border-radius: .5rem;
+    text-align: center;
+    flex: 1 1 30rem;
+    position: relative;
+
 }
 
-.projects .box .image img{
+.projects .box .box-22 img{
+    height: 25rem;
     width: 100%;
-    height: 100%;
-}
-
-.projects .box .content{
-    padding: 1rem;
-    width: 500px;
-}
-
-.projects .box .content h3{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    padding: 0.1rem;
-    margin: 5px;
-    text-shadow: 0.1em 0.1em 0.2em black;
-}
-
-.projects .box .content p{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    line-height: 25px;
-    padding: 0.1rem;
-    margin: 5px;
-}
-
-.projects-2 .box .content h3{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    padding: 0.1rem;
-    margin: 5px;
-    text-shadow: 0.1em 0.1em 0.2em black;
-}
-
-.projects-2 .box .content p{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    line-height: 25px;
-    padding: 0.1rem;
-    margin: 5px;
+    object-fit: scale-down;
+    border-radius: .5rem;
 }
 
 
-.projects-2{
-    height: 80vh;
-}
-.projects-2 .box{
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    margin-top: 12vh;
-    margin-bottom: 5vh;
-    font-family: 'Roboto Condensed', sans-serif;
+.projects .box .box-22 h3{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    padding-top: 1rem;
 }
 
-.projects-2 .box .image{
-    width: 800px;
-    height: 400px;
-    margin-left: 30px;
-}
-
-.projects-2 .box .image img{
-    width: 100%;
-    height: 100%;
-}
-
-.projects-2 .box .content{
-    padding: 1rem;
-    width: 500px;
-    
+.projects .box .box-22 .stars i{
+    color: gold;
+    font-size: 1.7rem;
+    padding:1rem .1rem;
 }
 
 .reveal{
@@ -718,8 +661,8 @@ footer .wave#wave4{
     }
     
     .projects .box .image{
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -728,11 +671,12 @@ footer .wave#wave4{
     
     .projects .box .content h3{
         display:flex;
+        position: absolute;
+        left: 69%;
         justify-content:center;
         align-items: center;
-        font-size: 2rem;
+        font-size: 1.2rem;
         padding: 0.1rem;
-        margin: 5px;
         text-shadow: 0.1em 0.1em 0.2em black;
     }
     
@@ -740,7 +684,7 @@ footer .wave#wave4{
         display:flex;
         justify-content:center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 25px;
         padding: 0.1rem;
         margin: 5px;
@@ -790,7 +734,7 @@ footer .wave#wave4{
 
 }
 
-@media(max-width:400px){
+@media(max-width:500px){
     html{
         font-size: 80%;
     }
@@ -806,21 +750,21 @@ footer .wave#wave4{
     }
     .Eu p{
         position: absolute;
-        top:42%;
+        top:33%;
         left: 29%;
     }
     .Eu h1{
         position: absolute;
         font-size: 2.5em;
-        top:43%;
+        top:35%;
         left: 29%;
     }
     .Eu h3{
         position: absolute;
-        top: 49%;
+        top: 40%;
         left: 35%;
     }
-
+    
     .competencias h3{
         left: 45%;
         font-size: 3em;
@@ -913,5 +857,21 @@ footer .wave#wave4{
     .projects-2{
         height: 80vh;
     }
+
+    .projects .box{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .projects .box .content{
+        flex: 1 1 30rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        border: 1rem solid rgba(0,0,0,.3);
+        cursor:pointer;
+    }
+
     
  }
